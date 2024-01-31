@@ -1,63 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <form action="" name="signUp">
 
-      <div>
-        Логин
-        <input type="text" name="name"/>
-        <div class="error"></div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
 
-      <div>
-        Пароль
-        <input type="password" name="password" />
-        <button type="button" class="show-password">show password</button>
-        <div class="error"></div>
-      </div>
+<body>
+  <form action="" class="form sigh-up-form" name="signUp">
+    <div>
+      <span>Имя</span>
+      <input type="text" name="name" />
+      <div class="error"></div>
+    </div>
 
-      <div>
-        Повторите пароль
-        <input type="password" name="confirm password"/>
-        <div class="error"></div>
-      </div>
+    <div>
+      <span>Фамилия</span>
+      <input type="text" name="surname" />
+      <div class="error"></div>
+    </div>
 
+    <!--------------------------------------------------------------->
+
+    <div class="gender">
+      <span>Пол</span>
       <div>
-        Введите e-mail
-        <input type="text" name="email"/>
-        <div class="error"></div>
+        <input type="radio" name="sex" checked />
+        Мужской
       </div>
 
       <div>
-        Укажите ваш возраст
-        <input type="text" name="age"/>
-        <div class="error"></div>
+        <input type="radio" name="sex" />
+        Женский
       </div>
+    </div>
 
-      <div class="cigaretes">
-        Вы курите сигареты?
-        <div><input type="radio" name="smoke" checked />Да</div>
-        <div><input type="radio" name="smoke" />Нет</div>
-        <div><input type="radio" name="smoke" />Иногда шалю</div>
-      </div>
+    <div>
+      <span>Проходили ли вы военную службу?</span>
+      <input type="checkbox" name="army">
+      <span>Да/Нет</span>
+    </div>
 
-      <div class="doctor">
-        К врачу ходил?
-        <select name="selectDoc">
-          <option value="yes">Да</option>
-          <option value="no">Нет</option>
-          <option value="die" selected>Умру молодым</option>
-        </select>
-      </div>
-      <button>Отправить</button>
-    </form>
+    <div>
+      <span>В каких родах войск?</span>
+     <select name="selectArmy">
+        <option value="divan">Диванные войска</option>
+        <option value="kavakeriya">Кавалерия</option>
+        <option value="artileriya">Артиллерия</option>
+        <option value="svaz">Войска связи</option>
+        <option value="ximiya">Химические войска</option>
+        <option value="shevya">Швейные войска</option>
+        <option value="uklonist" selected>На самом деле я уклонист</option>
+      </select>
+    </div>
 
-    <script src="index.js"></script>
-  </body>
+    <!--------------------------------------------------------------->
+
+    <div>
+      <span>Укажите ваш возраст</span>
+      <input type="text" name="age" />
+      <div class="error"></div>
+    </div>
+
+    <div>
+      <span>Курите ли вы сигареты?</span>
+      <input type="checkbox" name="cigarette">
+      <span>Да/Нет</span>
+    </div>
+
+    <div>
+      <span>Какие сигареты курите?</span>
+      <input type="text" name="cigaretteBrand">
+    </div>
+
+    <!--------------------------------------------------------------->
+    <div>
+      <span>Введите e-mail</span>
+      <input type="text" name="email" />
+      <div class="error"></div>
+    </div>
+
+     
+    <button type="button">Отправить</button>
+  </form>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
