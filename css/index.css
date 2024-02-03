@@ -1,11 +1,21 @@
 .error {
     display: none;
+    border-color: red;
+    color: red;
 }
 
-.cigaretes {
+.form-army {
     display: none;
 }
 
-.doctor {
-    display: none;;
+.form-combat-arms {
+    display: none;
+}
+
+.form-cigarette {
+    display: none;
+}
+
+.form-brand-cigarette {
+    display: none;
 }

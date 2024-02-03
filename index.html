@@ -5,88 +5,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-  <form action="" class="form sigh-up-form" name="signUp">
+  <form action="#" name="signUp">
+
     <div>
       <span>Имя</span>
-      <input type="text" name="name" />
-      <div class="error"></div>
+      <input type="text" name="name" class="input-name" />
+      <div id="firstnameError" class="error error-name">Допускаются только буквы длиной в 1 слово (без пробелов).
+        Минимальная длина 5 символа, максимальная длина 8 символов!</div>
     </div>
 
     <div>
       <span>Фамилия</span>
-      <input type="text" name="surname" />
-      <div class="error"></div>
+      <input type="text" name="surname" class="input-surname" />
+      <div id="surnameError" class="error error-surname">Допускаются только буквы длиной в 1 слово (без пробелов).
+        Минимальная длина 5 символа, максимальная длина 8 символов!</div>
     </div>
 
     <!--------------------------------------------------------------->
 
-    <div class="gender">
-      <span>Пол</span>
+    <div class="form-gender">
+      <div>Пол</div>
       <div>
-        <input type="radio" name="sex" checked />
-        Мужской
+        <input type="radio" class="input-gender" name="gender" value="man" />
+        <span>Мужской</span>
+        <div class="error error-gender-man">Укажите пол!</div>
+      </div>
+      <div>
+        <input type="radio" class="input-gender" name="gender" value="wonam" />
+        <span>Женский</span>
+        <div class="error error-gender-woman">Укажите пол!</div>
       </div>
 
-      <div>
-        <input type="radio" name="sex" />
-        Женский
+      <div class="form-army">
+        <span>Проходили ли вы военную службу?</span>
+        <input type="checkbox" name="army" class="input-army">
+        <span>Да/Нет</span>
+      </div>
+
+      <div class="form-combat-arms">
+        <span>В каких родах войск?</span>
+        <select name="selectArmy" class="select-combatant-arms">
+          <option value="divan">Диванные войска</option>
+          <option value="kavakeriya">Кавалерия</option>
+          <option value="artileriya">Артиллерия</option>
+          <option value="svaz">Войска связи</option>
+          <option value="ximiya">Химические войска</option>
+          <option value="shevya">Швейные войска</option>
+          <option value="uklonist" selected>На самом деле я уклонист</option>
+        </select>
       </div>
     </div>
 
-    <div>
-      <span>Проходили ли вы военную службу?</span>
-      <input type="checkbox" name="army">
-      <span>Да/Нет</span>
-    </div>
+    <!--------------------------------------------------------------->
 
-    <div>
-      <span>В каких родах войск?</span>
-     <select name="selectArmy">
-        <option value="divan">Диванные войска</option>
-        <option value="kavakeriya">Кавалерия</option>
-        <option value="artileriya">Артиллерия</option>
-        <option value="svaz">Войска связи</option>
-        <option value="ximiya">Химические войска</option>
-        <option value="shevya">Швейные войска</option>
-        <option value="uklonist" selected>На самом деле я уклонист</option>
-      </select>
+    <div class="form-age">
+      <div>
+        <span>Укажите ваш возраст</span>
+        <input type="text" name="age" class="input-age" />
+        <div class="error error-age">Опасный возраст!</div>
+      </div>
+
+      <div class="form-cigarette">
+        <span>Курите ли вы сигареты?</span>
+        <input type="checkbox" name="cigarette" class="input-cigarette">
+        <span>Да/Нет</span>
+      </div>
+
+      <div class="form-brand-cigarette">
+        <span>Какие сигареты курите?</span>
+        <input type="text" name="cigaretteBrand" class="input-cigarette-brand">
+        <div class="error error-brand-cigarette">Допускаются только буквы и цифры (другие символы запрещены) длиной в 1 слово, без пробелов. Минимальная длина 5 символа, максимальная длина 8 символов!</div>
+      </div>
     </div>
 
     <!--------------------------------------------------------------->
 
-    <div>
-      <span>Укажите ваш возраст</span>
-      <input type="text" name="age" />
-      <div class="error"></div>
-    </div>
-
-    <div>
-      <span>Курите ли вы сигареты?</span>
-      <input type="checkbox" name="cigarette">
-      <span>Да/Нет</span>
-    </div>
-
-    <div>
-      <span>Какие сигареты курите?</span>
-      <input type="text" name="cigaretteBrand">
-    </div>
-
-    <!--------------------------------------------------------------->
     <div>
       <span>Введите e-mail</span>
-      <input type="text" name="email" />
-      <div class="error"></div>
+      <input type="text" name="email" class="input-email" />
+      <div class="error error-email">Не правильно указана почта!</div>
     </div>
 
-     
-    <button type="button">Отправить</button>
+    <!--------------------------------------------------------------->
+
+    <button type="button" name="formBtn">Отправить</button>
   </form>
 
-  <script src="index.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
