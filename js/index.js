@@ -17,12 +17,12 @@ document.querySelector('.form-gender').addEventListener('click', e => {
     if (e.target.value === 'man') {
         document.querySelector('.form-army').style.display = 'block';
     }
-    else {
-        document.querySelector('.form-army').style.display = 'none';
-    }
 
     if (armyElem.checked) {
         document.querySelector('.form-combat-arms').style.display = 'block';
+    }
+    else {
+        document.querySelector('.form-combat-arms').style.display = 'none';
     }
 });
 
